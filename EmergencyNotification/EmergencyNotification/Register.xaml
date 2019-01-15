@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmergencyNotification.Register"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#FFC857">
+    <ContentPage.Content>
+        
+        <StackLayout Orientation="Vertical" Padding="10,10,10,10">
+            
+            <Label Text="Register" FontSize="Large"/>
+            
+            <Entry x:Name="tcNum" Placeholder="Tc Kimlik Numaram" FontSize="Micro"/>
+            <Entry x:Name="name" Placeholder="Ad" FontSize="Micro"/>
+            <Entry x:Name="surname" Placeholder="Soyad" FontSize="Micro"/>
+            
+            <DatePicker x:Name="birthDate" FontSize="Micro"/>
+            
+            <Entry x:Name="birthPlace" Placeholder="Doğum Yerim" FontSize="Micro"/>
+            <Entry x:Name="uname" Placeholder="Kullanıcı Adım" FontSize="Micro"/>
+            <Entry x:Name="password" IsPassword="True" Placeholder="Şifrem" FontSize="Micro"/>
+
+            <Button Text="Register" Clicked="Button_ClickedAsync" BackgroundColor="#255F85" TextColor="#FFC857" FontSize="Micro"/>
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

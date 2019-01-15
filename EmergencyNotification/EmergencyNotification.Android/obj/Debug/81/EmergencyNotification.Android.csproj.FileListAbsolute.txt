@@ -1,0 +1,1 @@
+C:\Users\ali_k\source\repos\EmergencyNotification\EmergencyNotification\EmergencyNotification\bin\Debug\netstandard2.0\EmergencyNotification.dll

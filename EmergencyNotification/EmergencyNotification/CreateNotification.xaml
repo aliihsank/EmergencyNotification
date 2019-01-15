@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmergencyNotification.CreateNotification"
+             NavigationPage.HasNavigationBar="False"
+             x:Name="newNotificationPage"
+             BackgroundColor="#FFC857">
+    <ContentPage.Content>
+        <ScrollView x:Name="scrollView">
+            <StackLayout x:Name="ParentLayout" Orientation="Vertical" Padding="15,15,15,15">
+                <ListView x:Name="listView" SeparatorVisibility="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical" BackgroundColor="#FFC857">
+                                    <Label Text="{Binding question}" FontSize="Medium" HorizontalOptions="Center" Margin="0,0,0,5"/>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                        <StackLayout Orientation="Vertical" HorizontalOptions="Center" WidthRequest="70" ClassId="{Binding id}">
+                                            <Image Source="{Binding img1}" WidthRequest="40" HeightRequest="40"/>
+                                            <Label Text="{Binding answer1}" HorizontalOptions="Center" FontSize="Micro"/>
+                                            <StackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer CommandParameter="{Binding answer1}" Tapped="AnswerChoosen"/>
+                                            </StackLayout.GestureRecognizers>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Vertical" HorizontalOptions="Center" WidthRequest="70" ClassId="{Binding id}">
+                                            <Image Source="{Binding img2}" WidthRequest="40" HeightRequest="40"/>
+                                            <Label Text="{Binding answer2}" HorizontalOptions="Center" FontSize="Micro"/>
+                                            <StackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer CommandParameter="{Binding answer2}" Tapped="AnswerChoosen"/>
+                                            </StackLayout.GestureRecognizers>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Vertical" HorizontalOptions="Center" WidthRequest="70" ClassId="{Binding id}">
+                                            <Image Source="{Binding img3}" WidthRequest="40" HeightRequest="40"/>
+                                            <Label Text="{Binding answer3}" HorizontalOptions="Center" FontSize="Micro"/>
+                                            <StackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer CommandParameter="{Binding answer3}" Tapped="AnswerChoosen"/>
+                                            </StackLayout.GestureRecognizers>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
