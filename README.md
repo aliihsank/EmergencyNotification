@@ -1,4 +1,4 @@
-# Acil Durum Bildirim Uygulaması - Acil Durum
+# Emergency Notification Application - EmergencyNotification
 
 Project Owner : Ali İhsan KARABAL
 
